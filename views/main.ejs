@@ -1,0 +1,42 @@
+<%-include("./partials/header.ejs")%> <%-include("./partials/nav.ejs")%>
+
+<div class="d-flex flex-column align-items-center pt-5">
+  <h1 class="m-5">Welcome To E-Book Directory</h1>
+  <h3>
+    <a class="text-decoration-none btn bg-danger text-light" href="/create"
+      >Add a book</a
+    >
+  </h3>
+  <ul
+    class="ms-5 list-group ulMain list-group-item w-100 list-unstyled d-flex flex-column border-0"
+  >
+    <% bookDb.forEach((book)=>{ %>
+
+    <div class="bookInfoDiv d-flex justify-content-between  mt-5 border">
+      <img class="cover" src="<%=book.cover %>" alt="" />
+      <li class="ms-4 fs-4 w-75">
+        <strong> <%=book.title %> </strong>
+        <span class="fs-5 w-75">
+          <br /><i class="ri-quill-pen-fill"></i>: <%=book.author %> <br />
+          <i class="ri-article-line"></i>: <%=book.pages %> <br />
+          <i class="ri-global-fill"></i>: <%=book.genre %> <br />
+          <i class="ri-printer-line"></i>: <%=book.publisher %>
+        </span>
+      </li>
+      <span>
+        <a
+          class="text-decoration-none text-danger fs-3"
+          href="/update/<%= book._id%>"
+          ><i class="ri-pencil-line"></i
+        ></a>
+        <a
+          class="text-decoration-none text-danger fs-3"
+          href="/delete/<%= book._id%>"
+          ><i class="ri-delete-bin-line"></i
+        ></a>
+      </span>
+    </div>
+    <% }) %>
+  </ul>
+</div>
+<%-include("./partials/footer.ejs")%>

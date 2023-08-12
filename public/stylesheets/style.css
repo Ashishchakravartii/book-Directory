@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.roboto{
+    font-family: 'Roboto';
+
+}
+.cover{
+    border: 2px solid red;
+        width: 15%;
+        object-fit: cover;
+    
+}
+.bookInfoDiv{
+    width: 55%;
+    padding: 1vmax 2vmax;
+    margin: auto;
+   
+}
+.ulMain{
+    white-space: nowrap;
+    background-color: red;
+}
+.tagLine{
+font-size: 4vmax;
+margin-top: -7vmax;
+
+}
+.landingContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4vmax;
+}
+.tagLinePara{
+    margin-top: 1vmax;
+    width: 80%;
+    text-align: left;
+}
+.f1{
+    font-family: 'Edu SA Beginner', cursive;
+}

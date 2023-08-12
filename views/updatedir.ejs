@@ -1,0 +1,17 @@
+<%-include("./partials/header.ejs")%>
+<%-include("./partials/nav.ejs")%>
+
+<form class="mt-5 d-flex gap-3 flex-column align-items-center" action="/update/<%=bookDb._id%>" method="post">
+    <h1 class="mt-5">Update Book Details</h1>
+    <img src="<%= bookDb.cover %>" alt="">
+    <input value="<%= bookDb.title %>" class="w-25 form-control " type="text" placeholder="Book Title" name="title">
+    <input value="<%= bookDb.author %>" class="w-25 form-control" type="text" placeholder="author" name="author">
+    <span></span><input value="<%= bookDb.pages %>" class="w-25 form-control " type="text" placeholder="Page Count" name="pages">
+    <input value="<%= bookDb.genre %>" class="w-25 form-control " type="text" placeholder="Genre/Category" name="genre">
+    <input value="<%= bookDb.cover %>" class="w-25 form-control " type="text" placeholder="Book Cover (Paste a link here)" name="cover">
+    <input value="<%= bookDb.publisher %>" class="w-25 form-control " type="text" placeholder="Publisher" name="publisher">
+    <button class="w-25 btn btn-secondary ">Save</button>
+    
+
+</form>
+<%-include("./partials/footer.ejs")%>

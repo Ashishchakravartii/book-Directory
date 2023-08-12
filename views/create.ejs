@@ -1,0 +1,15 @@
+<%-include("./partials/header.ejs")%>
+<%-include("./partials/nav.ejs")%>
+
+<form class="mt-5 d-flex gap-3 flex-column align-items-center" action="/create" method="post">
+    <h1 class="mt-5">Add Book Details</h1>
+    <input class="w-25 form-control " type="text" placeholder="Book Title" name="title">
+    <input class="w-25 form-control" type="text" placeholder="author" name="author">
+    <input class="w-25 form-control " type="text" placeholder="Page Count" name="pages">
+    <input class="w-25 form-control " type="text" placeholder="Genre/Category" name="genre">
+    <input class="w-25 form-control " type="text" placeholder="Book Cover (Paste a link here)" name="cover">
+    <input class="w-25 form-control " type="text" placeholder="Publisher" name="publisher">
+    <button class="w-25 btn btn-secondary ">Add +</button>
+
+</form>
+<%-include("./partials/footer.ejs")%>
